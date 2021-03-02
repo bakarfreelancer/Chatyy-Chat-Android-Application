@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Chatyy Chat</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="button_signin">Sign in</string>
+    <string name="button_register">Register</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="prompt_user_name">User Name</string>
+    <string name="field_required">Field Required</string>
+    <string name="email_required">Enter correct email</string>
+    <string name="pass_not_match">Passwords doesn\'t match</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "359491630219",
+    "project_id": "chatyy-chat",
+    "storage_bucket": "chatyy-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359491630219:android:8f8fa627ab14bebb21d08e",
+        "android_client_info": {
+          "package_name": "com.bakar.chatyychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359491630219-mqnns3jf3jjru92jika7teg1dofgfvuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-mjR1wCuNKo_Niq-lu5RQsVr8osRHAAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359491630219-mqnns3jf3jjru92jika7teg1dofgfvuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
