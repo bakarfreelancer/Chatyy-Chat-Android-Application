@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,16 +23,22 @@ public class ChatsListActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseDatabase mDatabase;
     DatabaseReference usersDatabaseReference;
+    DatabaseReference mdbRefrerence;
+    ListView userCurrentChatsList;
     String currentUserName;
     String currentUserEmail;
+    private ChatsListAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chats_list);
 
+        userCurrentChatsList = findViewById(R.id.userCurrentChatsList);
+
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
+        mdbRefrerence = FirebaseDatabase.getInstance().getReference();
         usersDatabaseReference = mDatabase.getReference("users");
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -42,6 +49,14 @@ public class ChatsListActivity extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        mAdapter = new ChatsListAdapter(this, mdbRefrerence, currentUserName);
+//        messages.setAdapter(mAdapter);
+    }
+
     private void getCurrentUserName(){
         Query query = usersDatabaseReference.orderByChild("email").equalTo(currentUserEmail);
         query.addListenerForSingleValueEvent(new ValueEventListener() {

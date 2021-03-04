@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatWithUserActivity">
+
+
+    <ListView
+        android:id="@+id/messages_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listFooter"
+        android:layout_alignParentTop="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:transcriptMode="alwaysScroll"  />
+
+    <LinearLayout
+        android:id="@+id/listFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <EditText
+            android:id="@+id/messageView"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:hint="Type a message to single user"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <Button
+            android:id="@+id/sendToSingleUser"
+            android:padding="10dp"
+            android:backgroundTint="@color/light_green"
+            android:background="@drawable/circle_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send"
+            android:contentDescription="send" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -56,6 +56,17 @@ public class SearchUserActivity extends AppCompatActivity {
                     Log.d("ChatyyChat", "searched: "+searchedName);
                     searchResultView.setText("Name: "+ searchedName + "\nEmail: " + searchedEmail);
                     searchResultView.setTextColor(R.color.primary_text);
+
+                    searchResultView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                Intent intent = new Intent(SearchUserActivity.this, com.bakar.chatyychat.ChatWithUserActivity.class);
+                                intent.putExtra("targetedUserEmail", searchedEmail);
+                                intent.putExtra("targetedUserName", searchedName);
+                                startActivity(intent);
+                                finish();
+                        }
+                    });
                 }else{
                     searchResultView.setText("Result not found!");
                     searchResultView.setTextColor(R.color.red);
