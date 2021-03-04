@@ -72,7 +72,7 @@ public class ChatsListActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.d("ChatyyChat", "onCancelled: "+error);
+                Log.d("ChatyyChat", "onCancelled:"+error);
             }
         });
     }
